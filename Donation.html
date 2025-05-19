@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ডোনেশন কনফারমেশন</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .spinner-border {
+      display: none;
+      width: 1.5rem;
+      height: 1.5rem;
+	  }
+	  body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+    .navbar-nav .nav-link {
+      font-size: 18px;
+    }
+    .gallery-img {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+	.Donation{
+		background: linear-gradient(268deg, #8b2a2a, transparent);
+	}
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="text-center">আল হূদা ফাউন্ডেশন</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">মেনু</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">হোম</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">আমাদের সম্পর্কে</a></li>
+            <li class="nav-item"><a class="nav-link" href="#activities">কার্যক্রম</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">যোগাযোগ</a></li>
+            <li class="nav-item"><a class="nav-link" href="new-member.html">নতুন সদস্য</a></li>
+            <li class="nav-item"><a class="nav-link" href="#donation">ডোনেশন</a></li>
+            <li class="nav-item"><a class="nav-link" href="#confirmation">কনফারমেশন</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4 Donation">ডোনেশন কনফারমেশন</h2>
+    <form id="confirmationForm" class="mx-auto" style="max-width: 100%;">
+      <div class="mb-3">
+        <label for="name" class="form-label">নাম:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">ডোনেশন পরিমাণ:</label>
+        <input type="number" class="form-control" id="amount" name="amount" required>
+      </div>
+      <div class="mb-3">
+        <label for="method" class="form-label">পেমেন্ট পদ্ধতি:</label>
+        <select class="form-select" id="method" name="method" required>
+          <option value="">-- নির্বাচন করুন --</option>
+          <option value="বিকাশ">বিকাশ</option>
+          <option value="নগদ">নগদ</option>
+          <option value="ব্যাংক">ব্যাংক</option>
+          <option value="ক্যাশ">ক্যাশ</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="trxid" class="form-label">লেনদেন নম্বর (TrxID):</label>
+        <input type="text" placeholder="ক্যাশ টাকা জমা দিলে যাকে দিয়েছেন তার নাম লিখুন" class="form-control" id="trxid" name="trxid" required>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <button type="submit" class="btn btn-primary">সাবমিট করুন</button>
+        <div class="spinner-border text-primary" role="status" id="loadingSpinner"></div>
+      </div>
+      <div id="responseMessage" class="text-center mt-3"></div>
+    </form>
+  </div>
+</section>
+
+<!-- 📞 যোগাযোগ -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">যোগাযোগ করুন</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ঠিকানা: ১২৩, প্রধান সড়ক, ঢাকা</li>
+          <li class="list-group-item">ফোন: +৮৮০ ১২৩৪৫৬৭৮৯০</li>
+          <li class="list-group-item">ইমেইল: info@alhudafoundation.org</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('confirmationForm');
+  const responseMessage = document.getElementById('responseMessage');
+  const spinner = document.getElementById('loadingSpinner');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    spinner.style.display = 'inline-block';
+    responseMessage.innerHTML = '';
+
+    const data = new FormData(form);
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyr1lgiaRo65aY8IipKPA8kc90xAWiMZOg5fOl4CkWpTYxWZdM5TFOeiii7X5ig_vMHXA/exec';
+
+    fetch(scriptURL, { method: 'POST', body: data })
+      .then(response => {
+        spinner.style.display = 'none';
+        responseMessage.innerHTML = "<span class='text-success'>✅ ধন্যবাদ! আপনার তথ্য গ্রহণ করা হয়েছে।</span>";
+        form.reset();
+        // ✅ Redirect after 3 seconds
+        setTimeout(() => {
+          window.location.href = 'thankyou.html'; // আপনি চাইলে অন্য পেজও দিতে পারেন
+        }, 3000);
+      })
+      .catch(error => {
+        spinner.style.display = 'none';
+        responseMessage.innerHTML = "<span class='text-danger'>❌ দুঃখিত! কিছু সমস্যা হয়েছে। আবার চেষ্টা করুন।</span>";
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

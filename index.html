@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-huda Foundation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="text-center">আল হূদা ফাউন্ডেশন</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">মেনু</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">হোম</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">আমাদের সম্পর্কে</a></li>
+            <li class="nav-item"><a class="nav-link" href="#activities">কার্যক্রম</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">যোগাযোগ</a></li>
+            <li class="nav-item"><a class="nav-link" href="new-member.html">নতুন সদস্য</a></li>
+            <li class="nav-item"><a class="nav-link" href="#donation">ডোনেশন</a></li>
+            <li class="nav-item"><a class="nav-link" href="Donation.html">কনফারমেশন</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- 🔸 Responsive Bootstrap Slider -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/slide1.png" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/slide2.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/slide3.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 4">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- ✅ আমাদের কার্যক্রম Section -->
+<section id="activities" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">আমাদের কার্যক্রম</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 text-white bg-success">
+          <div class="card-body">
+            <h5 class="card-title">যাকাতের অর্থে স্ববলম্বীকরণ প্রকল্প</h5>
+            <p class="card-text">আল-হুদা ফাউন্ডেশন কুরআন ও সুন্নাহ ভিত্তিক দিকনির্দেশনার মাধ্যমে বিভিন্ন আত্মনির্ভর প্রকল্প গ্রহণ করে।</p>
+            <a href="zakat-project.html" class="btn btn-light">বিস্তারিত দেখুন</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 text-white bg-info">
+          <div class="card-body">
+            <h5 class="card-title">ইফতার ও রমাদান ফুড বিতরণ</h5>
+            <p class="card-text">রমাদান মাসে সুবিধাবঞ্চিত মানুষের মধ্যে ইফতার বিতরণ কার্যক্রম পরিচালনা করা হয়।</p>
+            <a href="iftar-program.html" class="btn btn-light">বিস্তারিত দেখুন</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 text-white bg-primary">
+          <div class="card-body">
+            <h5 class="card-title">বৃক্ষরোপণ কর্মসূচি</h5>
+            <p class="card-text">পরিবেশ সংরক্ষণের লক্ষ্যে স্কুল, মসজিদ ও মাদ্রাসায় বৃক্ষরোপণ কর্মসূচি পরিচালিত হয়।</p>
+            <a href="tree-planting.html" class="btn btn-light">বিস্তারিত দেখুন</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🖼️ গ্যালারী সেকশন -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">গ্যালারী</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <div class="col"><img src="images/gallery1.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery1.jpg"></div>
+      <div class="col"><img src="images/gallery2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery2.jpg"></div>
+      <div class="col"><img src="images/gallery3.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery3.jpg"></div>
+      <div class="col"><img src="images/gallery4.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 4" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery4.jpg"></div>
+      <div class="col"><img src="images/gallery5.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 5" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery5.jpg"></div>
+      <div class="col"><img src="images/gallery6.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 6" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery6.jpg"></div>
+      <div class="col"><img src="images/gallery7.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 7" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery7.jpg"></div>
+      <div class="col"><img src="images/gallery8.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery 8" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/gallery8.jpg"></div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="btn btn-outline-primary">আরও</a>
+    </div>
+  </div>
+</section>
+
+<!-- 🔍 Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img id="modalImage" src="" class="img-fluid w-100" alt="বড় ছবি">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 💳 ডোনেশন সেকশন -->
+<section id="donation" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">ডোনেশন করুন</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">আপনার নাম</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">ডোনেশনের পরিমাণ (৳)</label>
+        <input type="number" class="form-control" id="amount" required>
+      </div>
+      <div class="mb-3">
+        <label for="method" class="form-label">পেমেন্ট পদ্ধতি</label>
+        <select class="form-select" id="method">
+          <option value="bkash">বিকাশ</option>
+          <option value="nogod">নগদ</option>
+          <option value="bank">ব্যাংক</option>
+          <option value="cash">ক্যাশ</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">সাবমিট করুন</button>
+    </form>
+  </div>
+</section>
+
+<!-- পেমেন্ট নির্দেশনা Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModalLabel">পেমেন্ট নির্দেশনা</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="paymentInfo">
+        <!-- ডায়নামিক পেমেন্ট তথ্য এখানে আসবে -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector('form');
+  const methodSelect = document.getElementById('method');
+  const paymentInfo = document.getElementById('paymentInfo');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const method = methodSelect.value;
+    let infoHTML = '';
+
+    if (method === 'bkash') {
+      infoHTML = `
+        <p><strong>পেমেন্ট পদ্ধতি:</strong> বিকাশ</p>
+        <p><strong>নাম্বার:</strong> 01783256704</p>
+        <p><strong>টাইপ:</strong> Personal</p>
+        <p>অনুগ্রহ করে পেমেন্ট সম্পন্ন করে ট্রানজেকশন আইডি সহ কনফারমেশন দিন।</p>
+      `;
+    } else if (method === 'nogod') {
+      infoHTML = `
+        <p><strong>পেমেন্ট পদ্ধতি:</strong> নগদ</p>
+        <p><strong>নাম্বার:</strong> 01783256704</p>
+        <p><strong>টাইপ:</strong> Personal</p>
+        <p>অনুগ্রহ করে পেমেন্ট সম্পন্ন করে ট্রানজেকশন আইডি সহ কনফারমেশন দিন।</p>
+      `;
+    }
+		else if (method === 'cash') {
+      infoHTML = `
+        <p><strong>পেমেন্ট পদ্ধতি:</strong> ক্যাশ</p>
+        <p><strong>ব্যাক্তি:</strong>যাকে টাকা জমা দিয়েছেন</p>
+        <p><strong>টাইপ:</strong> Personal</p>
+        <p>অনুগ্রহ করে পেমেন্ট সম্পন্ন করে ট্রানজেকশন আইডি্তে যাকে টাকা জমা দিয়েছেন তার নাম দিয়ে কনফারমেশন দিন।</p>
+      `;
+    }
+		else if (method === 'bank') {
+      infoHTML = `
+        <p><strong>ব্যাংক নাম:</strong> ইসলামী ব্যাংক বাংলাদেশ লিঃ</p>
+        <p><strong>একাউন্ট নাম:</strong> Al Huda Foundation</p>
+        <p><strong>একাউন্ট নম্বর:</strong> 1234567890</p>
+        <p><strong>শাখা:</strong> ঢাকা প্রধান শাখা</p>
+        <p>পেমেন্টের পর ট্রানজেকশন স্লিপ দিয়ে কনফারম করুন।</p>
+      `;
+    }
+	
+
+    paymentInfo.innerHTML = infoHTML;
+    const modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+    modal.show();
+  });
+</script>
+
+
+
+
+<!-- 🧾 আমাদের সম্পর্কে -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">আমাদের সম্পর্কে</h2>
+    <p class="lead text-center">
+      আল হূদা ফাউন্ডেশন একটি অরাজনৈতিক, অলাভজনক মানবকল্যাণমূলক সংগঠন যা সমাজের অসহায়, গরীব ও সুবিধাবঞ্চিত জনগণের সেবায় নিয়োজিত। কুরআন ও সুন্নাহর আলোকে সামাজিক উন্নয়ন, আত্মনির্ভরতা অর্জন এবং সচেতনতা বৃদ্ধির লক্ষ্যে বিভিন্ন কার্যক্রম পরিচালনা করে থাকে।
+    </p>
+  </div>
+</section>
+
+<!-- 📞 যোগাযোগ -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">যোগাযোগ করুন</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ঠিকানা: ১২৩, প্রধান সড়ক, ঢাকা</li>
+          <li class="list-group-item">ফোন: +৮৮০ ১২৩৪৫৬৭৮৯০</li>
+          <li class="list-group-item">ইমেইল: info@alhudafoundation.org</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const galleryImages = document.querySelectorAll('.gallery-img');
+  const modalImage = document.getElementById('modalImage');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImage.src = img.getAttribute('data-bs-img');
+    });
+  });
+</script>
+</body>
+</html>
